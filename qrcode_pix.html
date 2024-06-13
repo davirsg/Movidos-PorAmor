@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="qrcode_pix.css">
+    <link rel="icon" href="images/logo.png">
+    <title> Movidos por Amor - QR CODE </title>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div>
+            <a href=".container-home" class="logo">
+                <img src="images/logo.png">
+            </a>
+            <div>
+                <a href="">
+                    Faça sua doação!
+                </a>
+                <a href="">
+                    <img src="images/user.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <header class="cabecalho-invisivel"></header>
+
+    <div class="container-home">
+        <div>
+            <div>
+                <img src="images/logo.png">
+                <h1>
+                    Valor: 
+                    <strong>
+                        R$ 100,00
+                    </strong>
+                </h1>
+                <img src="images/qrcode.png" alt="">
+                <p>
+                    Você está tendo problemas para ler o cóodigo QR? o código abaixo e insira-o manualmente
+                </p>
+                <a href="" class="copiar" codigo='fsadfasdfasdfasdasfdfasdsdfasdfa'>
+                    Copiar Pix Copia e Cola
+                    <span>
+                        Copiado com sucesso!
+                    </span>
+                </a>
+                <p> 
+                    Entre no Internet Banking do seu banco preferido e selecione a opção PIX. <br>
+                    Selecione a opção QR Code e escaneie o código com a câmera do seu celular para efetuar o pagamento. <br>
+                    Por fim, clique em confirmar pagamento. <br>
+                </p>
+                <a href="index.html">
+                    Voltar
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="rodape">
+        <div>
+            <a href="index.html">
+                <img src="images/logo.png">
+            </a>
+
+            <div class="rodape-coluna">
+                <h2>
+                    Bem-vindo
+                </h2>
+                <a href="">
+                    Nosso time
+                </a>
+                <a href="">
+                    Voluntariado
+                </a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h2>
+                    Navegue
+                </h2>
+                <a href="">
+                    Termos de uso
+                </a>
+                <a href="">
+                    Política de privacidade
+                </a>
+                <a href="">
+                    Prestação de contas
+                </a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h2>
+                    Fale Conosco
+                </h2>
+                <a href="">
+                    Facebook
+                </a>
+                <a href="">
+                    Instagram
+                </a>
+                <a href="">
+                    E-mail
+                </a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h2>
+                    Contato
+                </h2>
+                <a href="">
+                    Endereço: 
+                </a>
+                <a href="">
+                    Amélia Rodrigues - Bahia
+                </a>
+                <a href="">
+                    Telefone: (75) 98279-1659
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const botaoCodigo = document.querySelector('.copiar');
+        const botaoCodigoSpan = document.querySelector('.copiar span');
+
+        document.addEventListener('click', e => {
+            
+            const el = e.target;
+
+            if(el == botaoCodigo){
+                e.preventDefault();
+                const codigo = botaoCodigo.getAttribute('codigo');
+                navigator.clipboard.writeText(codigo);
+
+                botaoCodigoSpan.style.display = 'inline-block';
+                setTimeout(function(){
+                    botaoCodigoSpan.style.display = 'none';
+                }, 3000)
+            }
+
+        });
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</body>
+
+</html>
