@@ -1,3 +1,6 @@
+// Arquivo Javascript da página principal - index.html
+
+
 const cabecalhoA = document.querySelectorAll('.cabecalho nav a');
 const [a1, a2, a3, a4, a5] = cabecalhoA;
 
@@ -26,6 +29,9 @@ const botaoForm = document.querySelector('#botao-form');
 document.addEventListener('click', e => {
 
     const el = e.target;
+
+    // Código abaixo referente ao rolamento dinâmico da página
+
     
     if(el == a1 || el == a2 || el == a3 || el == a4 || el == a5 || el == botaoDoar1 || el == botaoDoar2
         || el == a7 || el == a8 || el == a9 || el == a10 || el == a11){
@@ -50,6 +56,8 @@ document.addEventListener('click', e => {
         })
     }
 
+    // Código abaixo é referente ao ocultamento e desocultamento do cabeçalho oculto
+
     if(el == botaoMobile || el == botaoMobileSpan1 || el == botaoMobileSpan2 || el == botaoMobileSpan3){
         cabecalhoOculto.classList.add('cabecalho-oculto-mostrar');
     }
@@ -59,6 +67,8 @@ document.addEventListener('click', e => {
     }
 
 });
+
+// Quando o formulário no container de gerar pix for preenchido e enviado, ele oculta o botão e mostra o loader de carregamento
 
 document.addEventListener('submit', e => {
     loader.style.display = 'inline-block';
